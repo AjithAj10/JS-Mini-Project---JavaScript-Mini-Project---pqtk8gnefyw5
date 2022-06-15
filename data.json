@@ -1,0 +1,71 @@
+{
+"items":
+    [
+     {
+        "id": 1,
+        "model": "Google Pixel 3",
+        "image": "http://127.0.0.1:8000/media/img/phone_1-min.jpg",
+        "price": "64,000",
+        "memory": "64/128 GB, 4 GB RAM",
+        "battery": "Non-removable Li-Po 2915 mAh battery",
+        "chipset": "Qualcomm SDM845 Snapdragon 845 (10 nm)",
+        "display": "5.5 inches, 1080 x 2160 pixels, 18:9 ratio (~443 ppi density)",
+        "stock": 49
+     },
+     {
+        "id": 2,
+        "model": "SAMSUNG Galaxy F22(Denim Black, 64 GB)",
+        "image": "https://rukminim1.flixcart.com/image/416/416/kqqykcw0/mobile/p/y/u/galaxy-f22-sm-e225fzkhins-samsung-original-imag4z99fagskjxd.jpeg?q=70",
+        "price": "11,999",
+        "memory": "64 GB, 6 GB RAM",
+        "battery": "6000 mAh Lithium-ion Battery",
+        "chipset": "MediaTek Helio G80 Processor",
+        "display": "16.26 cm (6.4 inch) HD+ Display",
+        "stock": 120
+     },
+     {
+        "id": 3,
+        "model": "REDMI Note 10S (Deep Sea Blue, 64 GB)",
+        "image": "https://rukminim1.flixcart.com/image/416/416/kyeqjrk0/mobile/y/u/t/-original-imagan9qzdf2hbgy.jpeg?q=70",
+        "price": "12,999",
+        "memory": "64/128 GB, 6 GB RAM",
+        "battery": "5000 mAh Lithium-Ploymer Battery",
+        "chipset": "Mediatek Helio G95 Processor",
+        "display": "16.33 cm (6.43 inch) Full HD+ Super AMOLED Display",
+        "stock": 134
+     },
+     {
+        "id": 4,
+        "model": "realme 9 5G (Stargaze White, 128 GB)",
+        "image": "https://rukminim1.flixcart.com/image/416/416/l0jwbrk0/mobile/a/p/r/-original-imagcb64gwkhzdk5.jpeg?q=70",
+        "price": "17,999",
+        "memory": "64 GB, 6 GB RAM",
+        "battery": "5000 mAh Lithium Polymer Battery",
+        "chipset": " Mediatek Dimensity 810 Processor",
+        "display": "16.51 cm (6.5 inch) Full HD+ Display",
+        "stock": 120
+     },
+     {
+        "id": 5,
+        "model": "POCO C31 (Royal Blue, 64 GB)",
+        "image": "https://rukminim1.flixcart.com/image/416/416/ku4ezrk0/mobile/p/e/4/c31-mzb0a0jin-poco-original-imag7bzqxgdhgf2n.jpeg?q=70",
+        "price": "8,499",
+        "memory": "64/128 GB, 4 GB RAM",
+        "battery": "5000 mAh Lithium-ion Polymer Battery",
+        "chipset": "MediaTek Helio G35 Processor",
+        "display": "16.59 cm (6.53 inch) HD+ Display",
+        "stock": 249
+     },
+     {
+        "id": 6,
+        "model": "vivo T1 44W (Starry Sky, 128 GB)",
+        "image": "https://rukminim1.flixcart.com/image/416/416/l2p23rk0/mobile/s/4/3/-original-imagdznhcbdfwfud.jpeg?q=70",
+        "price": "14,500",
+        "memory": "128 GB, 4 GB RAM",
+        "battery": "5000 mAh Lithium Battery",
+        "chipset": "Qualcomm Snapdragon 680 Processor",
+        "display": "16.36 cm (6.44 inch) Full HD+ AMOLED Display",
+        "stock": 120
+     }
+    ]
+}
