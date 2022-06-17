@@ -114,7 +114,8 @@ p{
 .cartData{
     display: flex;
     padding: 1rem 1rem;
-    background-color: #8e8f8f;
+    background-color: #fdfdfd;
+    border-bottom: 1px solid grey;
 }
 
 .icon{
@@ -151,9 +152,15 @@ strike{
     height: 30px;
     border: none;
 }
+.minus:hover{
+background-color: var(--primary);
+}
+.plus:hover{
+    background-color: var(--primary);
+    }
 input{
     width: 40px;
-    padding-left: 1rem;
+    padding-left: .5rem;
 }
 .remove{
     margin-left: 2rem;
@@ -161,6 +168,26 @@ input{
     border-radius: 5px;
     border: none;
 }
+.remove:hover{
+    background-color: rgb(221, 77, 77);
+}
+.buttons{
+    margin-top: 2rem;
+    margin-left: -8.2rem;
+}
+/* .popup{
+    background-color: #303841;
+    padding: .5rem 1rem;
+    border-radius: 3px;
+    max-width: 13rem;
+    color: var(--light);
+    position: fixed; 
+        opacity: 1;
+        transition: opacity 1s;
+    top: -100px; 
+     display: none; 
+    margin-left: 80%;
+} */
 @media only screen and (max-width: 1260px) {
     .right{
         margin-left: 20% !important;
@@ -240,5 +267,9 @@ input{
     }
     .cartPage{
         width: 98%;
+    }
+    .buttons{
+        margin-top: 3rem;
+        margin-left: -5.8rem;
     }
 }

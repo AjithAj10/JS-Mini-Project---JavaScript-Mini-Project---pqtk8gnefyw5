@@ -26,8 +26,12 @@ addToCart.forEach((e) => {
         //  console.log(data.items[idNum]);
         addCartAsLocal(data.items[idNum]);
         e.disabled = true;
+        e.textContent = 'Added';
         cartTotal();
+        popup();  
+
     })
+
 })
 
 
@@ -70,9 +74,9 @@ function singleCartItem(data,i){
         <p>${data.items[i].memory}</p>
         <h5><span><strike><sup>${strikePrice} Rs</sup></strike> </span><span>${data.items[i].price} Rs</h5>
         <div class="buttons">
-        <button class="plus">+</button>
+        <button class="minus" onClick='minus(event)'>-</button>
         <input type="number" disabled value="${1}">
-        <button class="minus">-</button>
+        <button class="plus" onClick='plus(event)'>+</button>
         <button class="remove">Remove</button>
         </div>
     </div>
@@ -96,24 +100,62 @@ function cartTotal(){
     for(let i=0; i<wholeCartLocal.length;i++){
         TPrice += parseInt(wholeCartLocal[i].price);
         TDiscount +=  parseInt(wholeCartLocal[i].price) * 0.05;
-            console.log( wholeCartLocal[i].price );
     }
     items.textContent = wholeCartLocal.length;
     discount.textContent = TDiscount;
     total.textContent = TPrice;
 }
 
+//Not Finished
+function popup(){
+
+}
 
 let page = document.querySelector(".cartPage");
 let close = document.querySelector('.closeCart');
 let mn = document.querySelector('main');
+
+
+function plus(event){
+    let input = event.target.parentNode.children[1];
+    input.value = parseInt(input.value) +1;
+    let price = {};
+    price = event.target.parentNode.parentNode.children[2].children[1].textContent;
+    price = {price:parseInt(price)};
+    console.log(price);
+    addCartAsLocal(price);
+    cartTotal();
+}
+
+function minus(event){
+    let input = event.target.parentNode.children[1];
+    if(input.value != 1){
+        input.value = parseInt(input.value) -1;
+        let price = {};
+    price = event.target.parentNode.parentNode.children[2].children[1].textContent;
+    price = parseInt(price);
+    let cartData = JSON.parse( localStorage.getItem('cart') );
+    for(let i=0;i<cartData.length;i++){
+        if (cartData[i].price == price) {
+        //remove break
+        
+    }
+}
+    console.log( );
+    // console.log(cartData);
+    cartTotal();
+    }
+
+}
+
 
 cartBtn.addEventListener("click", () => {
     page.classList.add('showCart');
 })
 
 mn.addEventListener("click", () => {
-    page.classList.remove('showCart');
+    // gsap.fromTo('.page',{x:0},{x:-100,duration: 1});
+     page.classList.remove('showCart');
 })
 
 
