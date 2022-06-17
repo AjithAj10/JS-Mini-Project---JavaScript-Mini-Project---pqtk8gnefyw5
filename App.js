@@ -43,7 +43,7 @@ let cartCover = document.querySelector('.cartContent');
 
 function singleProduct(data,i){
     let product = "";
-    product = `<div class="product">
+    product = `<div class="product col-lg-6">
     <div class="img">
         <img src="${data.items[i].image}" alt="">
     </div>
