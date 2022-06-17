@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./mk.png" type="image/icon type">
     <title>Mobile shop</title>
     <!-- CSS only -->
 <link rel="stylesheet" href="./styles.css">
@@ -34,10 +35,9 @@
 
 </main>
 <!-- cart -->
-<div class="cartPage">
-    <div class="left">
-    <div class="head"> My Cart <span id="count">0</span>
-    </div>
+<div class="cartPage"> 
+    <div class="cartHead"> My Cart  <button class="closeCart btn"><i class="fa-solid fa-xmark fa-2xl"></i></button></div>
+    <div class="left">     
     <div class="cartContent">
           <!-- js DOM area -->
   
@@ -49,15 +49,16 @@
             <h3>Price Details</h3>
         </div>
         <div class="body">
-            <div id="val"><h5>Items </h5> <h5 id="items">4</h5></div>
-            <div id="val"><h5>Discount </h5> <h5 id="discount">4</h5></div>
-            <div id="val"><h5>Delivery fee </h5> <h5 id="delivery">4</h5></div>
-            <div id="val" class="mt-3"><h3><b>Total </b></h3> <h3 id="total">4</h3></div>
+            <div id="val"><h5>Items </h5> <h5 id="items">0</h5></div>
+            <div id="val"><h5>Discount </h5> <h5 id="discount">0</h5></div>
+            <div id="val"><h5>Delivery fee </h5> <h5 id="delivery">Free</h5></div>
+            <div id="val" class="mt-3"><h3><b>Total </b></h3> <h3 id="total">0</h3></div>
             <button class="btn btn-primary btn-large">Place Order</button>
         </div>
     </div>
-    <div class="icon"><button class="closeCart btn"><i class="fa-solid fa-xmark fa-2xl"></i></button></div>
 </div>
+
+
 <!-- footer -->
 
 <!-- js -->
