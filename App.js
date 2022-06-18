@@ -28,7 +28,7 @@ addToCart.forEach((e) => {
         e.disabled = true;
         e.textContent = 'Added';
         cartTotal();
-        popup();  
+        showNotification(); 
 
     })
 
@@ -77,7 +77,7 @@ function singleCartItem(data,i){
         <button class="minus" onClick='minus(event)'>-</button>
         <input type="number" disabled value="${1}">
         <button class="plus" onClick='plus(event)'>+</button>
-        <button class="remove">Remove</button>
+        <button class="remove" onClick='remove(event)'>Remove</button>
         </div>
     </div>
 </div>`
@@ -122,29 +122,56 @@ function plus(event){
     let price = {};
     price = event.target.parentNode.parentNode.children[2].children[1].textContent;
     price = {price:parseInt(price)};
-    console.log(price);
+    // console.log(price);
     addCartAsLocal(price);
     cartTotal();
 }
 
 function minus(event){
     let input = event.target.parentNode.children[1];
+
     if(input.value != 1){
         input.value = parseInt(input.value) -1;
-        let price = {};
-    price = event.target.parentNode.parentNode.children[2].children[1].textContent;
-    price = parseInt(price);
-    let cartData = JSON.parse( localStorage.getItem('cart') );
-    for(let i=0;i<cartData.length;i++){
-        if (cartData[i].price == price) {
+
+        price = event.target.parentNode.parentNode.children[2].children[1].textContent;
+        price = parseInt(price);
+        let cartData = JSON.parse( localStorage.getItem('cart') );
+
+        for(let i=cartData.length-1;i>=0;i--){
+            if (cartData[i].price == price ) {
         //remove break
-        
-    }
-}
-    console.log( );
-    // console.log(cartData);
+                cartData.pop(i);
+                break;
+            }
+        }
+        localStorage.setItem('cart',JSON.stringify( cartData) );
     cartTotal();
     }
+
+}
+
+function remove(event){
+
+   let price = event.target.parentNode.parentNode.children[2].children[1].textContent;
+    price = parseInt(price);
+    let cartData = JSON.parse( localStorage.getItem('cart') );
+let cart = [];
+
+    for(let i=0;i<cartData.length;i++){
+        if (cartData[i].price != price ) {
+            console.log(cartData[i]);
+            cart = [...cart,cartData[i]];
+        }
+    }
+    console.log(cart);
+    localStorage.setItem('cart',JSON.stringify( cart ) );
+     event.target.parentNode.parentNode.parentNode.remove();
+cartTotal();
+setTimeout(() => {
+    if(cart == ''){
+        window.location.reload();
+    }
+},1000)
 
 }
 
@@ -163,3 +190,9 @@ close.addEventListener("click", () => {
     page.classList.remove('showCart');
 })
 
+function showNotification(){    
+    Push.create('Added to cart',{
+        icon:'./mk.png',
+        timeout: 2000,
+    });
+}
