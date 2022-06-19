@@ -31,22 +31,22 @@ Implement Shopping cart with JavaScript that consists of two sections:
 </ul>
 
 <h3>Process</h3>
-sign in (Optional)
-Add the items to cart.
-allow notifications to show
-Open the cart.
-Add or remove the number of a item.
-if done shopping.
-click place order.
+- sign in (Optional)
+- Add the items to cart.
+- allow notifications to show
+- Open the cart.
+- Add or remove the number of a item.
+- if done shopping.
+- click place order.
 
 <h3>Used languages/framework</h3>
 <ol>
 <li>HTML</li>
 <li>css</li>
 <li>Bootstrap</li>
-
+</ol>
 <h3>External links used</h3>
-Bootstrap cdn
-Poppins font
-jQuery cdn
-gsap cdn
+- Bootstrap cdn
+- Poppins font
+- jQuery cdn
+- gsap cdn
