@@ -31,14 +31,15 @@ Implement Shopping cart with JavaScript that consists of two sections:
 </ul>
 
 <h3>Process</h3>
-- sign in (Optional)
-- Add the items to cart.
-- allow notifications to show
-- Open the cart.
-- Add or remove the number of a item.
-- if done shopping.
-- click place order.
-
+<ol>
+<li> sign in (Optional)</li>
+<li> Add the items to cart.</li>
+<li> allow notifications to show</li>
+<li> Open the cart.</li>
+<li> Add or remove the number of a item.</li>
+<li> if done shopping.</li></li>
+<li>click place order.</li>
+</ol>
 <h3>Used languages/framework</h3>
 <ol>
 <li>HTML</li>
