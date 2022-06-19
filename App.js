@@ -15,8 +15,6 @@ async function create() {
     let addToCart = document.querySelectorAll('.cart');
 localStorage.setItem('data',JSON.stringify(data.items));
 
-//  let s = JSON.parse( localStorage.getItem('data') );  // access the whole data
-// console.log(s);
 
 //Add to cart button
 addToCart.forEach((e) => {
@@ -113,7 +111,7 @@ function popup(){
 
 let page = document.querySelector(".cartPage");
 let close = document.querySelector('.closeCart');
-let mn = document.querySelector('main');
+let main = document.querySelector('main');
 
 
 function plus(event){
@@ -122,7 +120,6 @@ function plus(event){
     let price = {};
     price = event.target.parentNode.parentNode.children[2].children[1].textContent;
     price = {price:parseInt(price)};
-    // console.log(price);
     addCartAsLocal(price);
     cartTotal();
 }
@@ -159,14 +156,15 @@ let cart = [];
 
     for(let i=0;i<cartData.length;i++){
         if (cartData[i].price != price ) {
-            console.log(cartData[i]);
             cart = [...cart,cartData[i]];
         }
     }
-    console.log(cart);
     localStorage.setItem('cart',JSON.stringify( cart ) );
      event.target.parentNode.parentNode.parentNode.remove();
 cartTotal();
+if(cart != ''){
+    btnEnable(price);
+}
 setTimeout(() => {
     if(cart == ''){
         window.location.reload();
@@ -175,12 +173,34 @@ setTimeout(() => {
 
 }
 
+function btnEnable(price){
+
+    let data = JSON.parse( localStorage.getItem('data') );
+    let id_ = '';
+
+
+for(let i=0; i<data.length;i++){
+if(data[i].price == price){
+    id_ = data[i].id;
+    id_ = id_-1;
+    break;
+  }
+
+ }
+ let cartBtn = document.querySelectorAll('.cart');
+
+ cartBtn.forEach((btn) => {
+   if(btn.id == id_){
+        btn.disabled = false;
+   }
+ })
+}
 
 cartBtn.addEventListener("click", () => {
     page.classList.add('showCart');
 })
 
-mn.addEventListener("click", () => {
+main.addEventListener("click", () => {
     // gsap.fromTo('.page',{x:0},{x:-100,duration: 1});
      page.classList.remove('showCart');
 })
@@ -190,9 +210,32 @@ close.addEventListener("click", () => {
     page.classList.remove('showCart');
 })
 
-function showNotification(){    
+function showNotification(text){    
     Push.create('Added to cart',{
         icon:'./mk.png',
         timeout: 2000,
     });
 }
+let container_ = document.querySelector('.container');
+
+sign.addEventListener('click', () => {
+    container_.classList.add('showContainer');
+
+})
+
+
+let close_ = document.querySelector('.closeX');
+close_.addEventListener('click', () => {
+    console.log(container_);
+    container_.classList.remove('showContainer');
+})
+
+let buyBtn = document.querySelector('.btn-large');
+let cardBuy = document.querySelector('.card');
+
+buyBtn.addEventListener('click', () => {
+    cardBuy.classList.add('showCard');
+    setTimeout(() => {
+        window.location.reload();
+    },1000);
+})

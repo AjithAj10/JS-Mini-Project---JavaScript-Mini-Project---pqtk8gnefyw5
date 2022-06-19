@@ -8,6 +8,7 @@
     <title>Mobile shop</title>
     <!-- CSS only -->
 <link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="./sign.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet"> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./push.js"></script>
@@ -24,10 +25,14 @@
         <h3>Mcart</h3>
     </div>
     <div class="cart-btn">
-        <a href="#">Sign in</a>
+        <button class="btn" id="sign">Sign in</button>
         <button class="btn" id="cartBtn"> <i class="fa-solid fa-cart-shopping fa-xl"></i> </button>
     </div>
 </nav>
+<div class="card">
+    <h3>Your order Placed succesfully</h3>
+    <h6>Thank you for choosing us</h6>
+</div>
 <!-- main -->
                 <!-- use container-fluid -->
      <main>
@@ -62,11 +67,32 @@
     </div>
 </div>
 
+<div class="container">
+    <button class="closeX"> close</button>
+    <form action="">
+        <h3 class="mb-3" id="signit">Sign in</h3>
+
+        <input type="text" name="name" placeholder="Name" required>
+        <p>Name should be at least 5 character long</p>
+        <input type="text" name="email" placeholder="Email" required>
+        <p>Email should be of form name@name.com  </p>
+        <input type="number" name="mobile" placeholder="Mobile" required>
+        <p>Mobile number should be 10 digit long</p>
+        <input type="password" name="password" placeholder="Password" required>
+        <p>Name should be at least 8 character long</p>
+        <input type="text" name="address" placeholder="Address" required>
+        <p>Name should be at least 4 character long</p>
+        <button type="button" class="btn btn-large sub btn-primary">submit</button>
+    </form>
+</div>
+
+
 
 <!-- footer -->
 
 <!-- js -->
 <script src="./App.js"></script>
+<script src="./validate.js"></script>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>

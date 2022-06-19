@@ -61,7 +61,8 @@ h5{
 }
 .product{
     display: flex;
-    margin-bottom: .5rem;
+    margin-bottom: 2rem;
+
 }
 
 .content{
@@ -190,6 +191,25 @@ input{
      display: none; 
     margin-left: 80%;
 } */
+
+
+.card{
+    text-align: center;
+    padding: 2rem 2rem;
+    position: absolute;
+    margin-top: 35%;
+    background-color: #2185D5 !important;
+    color: #F3F3F3;
+    z-index: 3;
+    width: fit-content;
+    margin-left: 30%;
+display: none !important;
+}
+
+.showCard{
+   display: block !important;
+}
+
 @media only screen and (max-width: 1260px) {
     .right{
         margin-left: 20% !important;
@@ -220,6 +240,7 @@ input{
    
    
     .product{
+        margin-bottom: auto;
         margin-left: .5rem;
     }
     .container-fluid{
@@ -248,7 +269,9 @@ input{
 }
 
 @media only screen and (max-width: 500px) {
-   
+   .card{
+    margin-left: 10%;
+   }
     .content{
         margin-left: 1rem;
     }
