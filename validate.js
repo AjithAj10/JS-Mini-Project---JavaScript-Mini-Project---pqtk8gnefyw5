@@ -1,6 +1,6 @@
 
 let obj = {
-    name:/\w{5}/i,
+    name:/\w{4}/i,
     email:/^\w+@\w+\.\w+/,
     mobile:/^\d{10}$/,
     password:/\w{8}/,
