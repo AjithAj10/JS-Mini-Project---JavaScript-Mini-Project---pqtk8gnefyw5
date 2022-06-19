@@ -196,7 +196,7 @@ input{
 .card{
     text-align: center;
     padding: 2rem 2rem;
-    position: absolute;
+    position: fixed;
     margin-top: 35%;
     background-color: #2185D5 !important;
     color: #F3F3F3;
