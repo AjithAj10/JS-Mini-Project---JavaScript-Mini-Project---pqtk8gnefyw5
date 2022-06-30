@@ -5,12 +5,19 @@
 display: flex !important;
 display: none !important;
 position: fixed;
-background-color: rgb(133, 133, 133);
+background-color: rgba(119, 119, 119, 0.9);
+
 padding: 5rem 5rem !important;
 justify-content: center;
 align-items: center;
 height: 100vh;
 
+}
+#signit {
+    color: var(#2185D5) !important;
+font-weight: 700;
+font-family: sans-serif;
+font-size: 30px;
 }
 #sign{
 border: none !important;
@@ -21,7 +28,7 @@ color: white !important;
     margin-left: 100%;
     border: none;
     background: none;
-    color: rgb(14, 1, 1);
+    color: rgb(255, 255, 255);
 }
 .showContainer{
     display: block !important;
@@ -37,7 +44,7 @@ form{
 form input{
     display: block;
     flex-direction: column;
-    width: 20rem;
+    width: 22rem;
     font-size: 15px;
     outline: none;
     border: 2px solid grey;
@@ -68,4 +75,17 @@ input.error + p{
     opacity: 1;
     height: auto;
     margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 700px) {
+    form input{
+        display: block;
+        flex-direction: column;
+        width: 100%;
+        font-size: 15px;
+        outline: none;
+        border: 2px solid grey;
+        border-radius: 10px;
+        padding: .5rem .5rem;
+    }
 }
