@@ -16,6 +16,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 nav{
     display: flex;
     color: white;
@@ -174,6 +175,7 @@ input{
 .remove:hover{
     background-color: rgb(221, 77, 77);
 }
+
 .buttons{
     margin-top: 2rem;
     margin-left: -8.2rem;
@@ -191,8 +193,12 @@ input{
      display: none; 
     margin-left: 80%;
 } */
-
-
+footer{
+    background-color: var(--dark);
+}
+.btn-floating{
+    border-radius: 100% !important;
+}
 .card{
     text-align: center;
     padding: 2rem 2rem;
